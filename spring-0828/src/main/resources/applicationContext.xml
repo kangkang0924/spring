@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+
+
+    <!-- 扫包 -->
+    <!--    <context:component-scan base-package="com.ssm"/>-->
+    <!--    <bean id="helloSpring2" class="com.ssm.HelloSpring"></bean>-->
+
+    <bean class="com.ssm.HelloSpring" id="helloSpring">
+        <property name="userName" value="sdf"></property>
+    </bean>
+    <context:component-scan base-package="com.ssm"/>
+    <bean class="com.ssm.Circle" id="circle">
+
+    </bean>
+    <bean class="com.ssm.Square" id="square">
+
+    </bean>
+    <bean id="adminInfo" class="com.ssm.entity.AdminInfo">
+        <property name="id" value="1"></property>
+        <property name="pwd" value="123"></property>
+        <property name="name" value="admin"></property>
+
+    </bean>
+    <bean id="user" class="com.ssm.entity.User">
+        <property name="userID" value="10010"></property>
+        <property name="username" value="kk0924"></property>
+        <property name="password" value="qaz"></property>
+    </bean>
+    <bean id="Person" class="com.ssm.entity.Person">
+        <property name="user" ref="user"></property>
+    </bean>
+    <bean id="admin" class="com.ssm.entity.AdminInfo" p:id="111" p:name="admin111" p:pwd="admin">
+    </bean>
+
+</beans>
