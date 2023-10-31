@@ -1,8 +1,7 @@
 package com.ssm.aop;
 
 
-import org.junit.jupiter.api.Test;
-
+import org.junit.Test;
 /**
  * @author 韩德康~
  * @version 1.0

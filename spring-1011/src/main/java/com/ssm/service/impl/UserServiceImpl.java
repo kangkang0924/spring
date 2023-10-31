@@ -15,10 +15,7 @@ public class UserServiceImpl implements UserService {
     private WuhanhuiDAO wuhanhuiDAO;
     //成员变量的setter方法
 
-    /*
-     * public WuhanhuiDAO wuhanhuiDAO; public void setWuhanhuiDAO(WuhanhuiDAO
-     * wuhanhuiDAO) { this.wuhanhuiDAO = wuhanhuiDAO; }
-     */
+
     @Override
     public boolean login(String loginName, String loginPwd) {
         // TODO Auto-generated method stub

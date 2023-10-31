@@ -1,37 +1,16 @@
 package com.ssm.entity;
 
+import lombok.Data;
+
+@Data
 public class User {
-    private String userID;
+    private Integer id;
     private String userName;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     private String password;
+    private int money;
 
-    public String getUserID() {
-        return userID;
-    }
-
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public User(String userID, String userName) {
-        this.userID = userID;
+    public User(Integer userID, String userName) {
+        this.id = userID;
         this.userName = userName;
     }
 
@@ -39,9 +18,5 @@ public class User {
 
     }
 
-    @Override
-    public String toString() {
-        return "User [userID=" + userID + ", userName=" + userName + "]";
-    }
 
 }
