@@ -15,6 +15,15 @@ public class UserServiceImpl implements UserService {
     private WuhanhuiDAO wuhanhuiDAO;
     //成员变量的setter方法
 
+    @Override
+    public void transMoney(int fromID, int toID) {
+        // TODO Auto-generated method stub
+        userDAO.updateMoney(1500,2);
+        int i = 10/0;
+        userDAO.updateMoney(3000,3);
+
+
+    }
 
     @Override
     public boolean login(String loginName, String loginPwd) {
@@ -23,6 +32,4 @@ public class UserServiceImpl implements UserService {
         return userDAO.login(loginName, loginPwd);
 //		return wuhanhuiDAO.login(loginName, loginPwd);
     }
-
-
 }

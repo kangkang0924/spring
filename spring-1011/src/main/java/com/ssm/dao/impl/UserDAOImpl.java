@@ -65,10 +65,18 @@ public class UserDAOImpl implements UserDAO {
         return this.jdbcTempLate.query(sql, rowMapper);
     }
 
+    // 修改金钱方法
     @Override
-    public void transMoney(int fromID, int toID) {
-        
+    public int updateMoney(double money,int id) {
+        // TODO Auto-generated method stub
+        String sql="update usert set money=? where id=?";
+
+        Object[] params=new Object[] {money,id};
+
+        //执行修改操作，返回的是受影响的记录条数
+        int result = jdbcTempLate.update(sql,params);
+        return result;
+
+
     }
-
-
 }

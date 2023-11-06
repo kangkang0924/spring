@@ -15,7 +15,6 @@ public interface UserDAO {
 
     User findUserById(int id);
     List<User> findAllUser();
-
-    void transMoney(int fromID, int toID);
+    int updateMoney(double money,int id);
 
 }
