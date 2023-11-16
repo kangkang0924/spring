@@ -6,7 +6,7 @@ public class Square implements Shape {
     @Override
     public void draw() {
         // TODO Auto-generated method stub
-        System.out.println("draw a square");
+        System.out.println("画画画画画画画画画画画画画画画画画画画画画draw a square");
 
     }
 }

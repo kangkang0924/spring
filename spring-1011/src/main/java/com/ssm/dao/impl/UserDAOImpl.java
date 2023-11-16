@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository("UserDAO")
+
 public class UserDAOImpl implements UserDAO {
     private JdbcTemplate jdbcTempLate;
 

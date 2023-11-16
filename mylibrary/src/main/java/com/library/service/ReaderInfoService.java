@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class ReaderInfoService {
     @Autowired
     private ReaderInfoDao readerInfoDao;
+    Object object = new Object();
 
     public ArrayList<ReaderInfo> readerInfos() {
         return readerInfoDao.getAllReaderInfo();

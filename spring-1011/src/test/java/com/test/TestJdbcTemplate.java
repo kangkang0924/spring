@@ -1,5 +1,6 @@
 package com.test;
 
+import com.ssm.dao.HandekangDAO;
 import com.ssm.dao.UserDAO;
 import com.ssm.entity.User;
 import org.junit.Test;
@@ -49,6 +50,25 @@ public class TestJdbcTemplate {
         for (int j = 1; j < 10; j++) {
             i = userDao.addUser(user);
         }
+
+        if (i > 0) {
+
+            System.out.println("插入了" + i + "条数据");
+        } else {
+            System.out.println("失败了");
+        }
+    }
+    @Test
+    public void addUser03() {
+
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("handekangapplicationContext.xml");
+        HandekangDAO handekangDAO = (HandekangDAO) ctx.getBean("handekangDAO");
+
+        User user = new User();
+        user.setUserName("韩德康");
+        user.setPassword("2061100021");
+        int i = 0;
+        i = handekangDAO.addUser(user);
 
         if (i > 0) {
 

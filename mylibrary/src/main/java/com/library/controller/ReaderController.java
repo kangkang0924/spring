@@ -5,6 +5,7 @@ import com.library.bean.ReaderInfo;
 import com.library.service.LoginService;
 import com.library.service.ReaderCardService;
 import com.library.service.ReaderInfoService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,7 +47,7 @@ public class ReaderController {
         return readerInfo;
     }
 
-    @RequestMapping("allreaders.html")
+    @RequestMapping(value = "allreaders.html")
     public ModelAndView allBooks() {
         ArrayList<ReaderInfo> readers = readerInfoService.readerInfos();
         ModelAndView modelAndView = new ModelAndView("admin_readers");

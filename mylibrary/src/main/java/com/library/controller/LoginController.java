@@ -43,7 +43,8 @@ public class LoginController {
     //负责处理loginCheck.html请求
     //请求参数会根据参数名称默认契约自动绑定到相应方法的入参中
     @RequestMapping(value = "/api/loginCheck", method = RequestMethod.POST)
-    @ResponseBody public Object loginCheck(HttpServletRequest request) {
+    @ResponseBody
+    public Object loginCheck(HttpServletRequest request) {
         long id = Long.parseLong(request.getParameter("id"));
         String passwd = request.getParameter("passwd");
         boolean isReader = loginService.hasMatchReader(id, passwd);
